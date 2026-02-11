@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Products | LendPal Capital</title>
+  <meta name="description" content="Explore LendPal Capital's financial products - Emergency Quick Loans, Business Loans, Payroll Employee Loans, and Partnership Agency Financing.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1c2e3b',
+            accent: '#fa9e20',
+            'gray-light': '#F9FAFB',
+            'gray-dark': '#6B7280',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Poppins', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="flex flex-col min-h-screen bg-white">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white shadow-md">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <a href="index.html" class="flex items-center space-x-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent p-1" aria-label="LendPal Capital Home">
+          <img src="assets/logo.svg" alt="LendPal Capital" class="h-16 w-auto object-contain">
+        </a>
+        <nav class="hidden md:flex space-x-8">
+          <a href="index.html" data-nav-link class="text-sm font-medium transition-colors hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent rounded px-2 py-1 text-primary">Home</a>
+          <a href="about.html" data-nav-link class="text-sm font-medium transition-colors hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent rounded px-2 py-1 text-primary">About Us</a>
+          <a href="products.html" data-nav-link class="text-sm font-medium transition-colors hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent rounded px-2 py-1 text-primary">Products</a>
+          <a href="partners.html" data-nav-link class="text-sm font-medium transition-colors hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent rounded px-2 py-1 text-primary">Partners</a>
+          <a href="faq.html" data-nav-link class="text-sm font-medium transition-colors hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent rounded px-2 py-1 text-primary">FAQs</a>
+          <a href="contact.html" data-nav-link class="text-sm font-medium transition-colors hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent rounded px-2 py-1 text-primary">Contact</a>
+        </nav>
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md text-primary hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent" aria-label="Open menu" aria-expanded="false">
+          <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+          <svg id="menu-icon-close" class="hidden" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg z-50">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="index.html" data-nav-link class="block px-3 py-4 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent">Home</a>
+        <a href="about.html" data-nav-link class="block px-3 py-4 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent">About Us</a>
+        <a href="products.html" data-nav-link class="block px-3 py-4 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent">Products</a>
+        <a href="partners.html" data-nav-link class="block px-3 py-4 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent">Partners</a>
+        <a href="faq.html" data-nav-link class="block px-3 py-4 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent">FAQs</a>
+        <a href="contact.html" data-nav-link class="block px-3 py-4 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow">
+    <div class="bg-gray-50 min-h-screen">
+
+      <!-- Header Banner -->
+      <div class="bg-primary text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+          <h1 class="text-4xl font-bold font-heading mb-4">Our Products</h1>
+          <p class="text-xl text-gray-300 max-w-2xl mx-auto">Tailored financial solutions designed to meet your specific needs.</p>
+        </div>
+      </div>
+
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+
+          <!-- Emergency Quick Loans -->
+          <div class="group bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col h-full focus-within:ring-2 focus-within:ring-accent relative">
+            <div class="bg-primary p-6 flex justify-between items-center transition-colors group-hover:bg-primary/95">
+              <div class="bg-accent p-3 rounded-lg shadow-inner group-hover:scale-110 transition-transform duration-300">
+                <svg class="h-8 w-8 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
+              </div>
+              <div class="text-right">
+                <p class="text-accent text-sm font-bold uppercase tracking-wider">Loan Amount</p>
+                <p class="text-white font-bold text-lg">KES 5,000 - 100,000</p>
+              </div>
+            </div>
+            <div class="p-8 flex-grow flex flex-col">
+              <h3 class="text-2xl font-bold text-primary mb-4 font-heading group-hover:text-accent transition-colors">Emergency Quick Loans</h3>
+              <p class="text-gray-600 mb-6 flex-grow leading-relaxed">Designed for urgent financial needs. Get cash in your hands within 24 hours of application.</p>
+              <div class="mb-6 bg-gray-50 p-4 rounded-lg border-l-4 border-accent">
+                <p class="text-sm font-bold text-gray-700 mb-1">Ideal For:</p>
+                <p class="text-sm text-gray-600 italic">Individuals facing unexpected expenses, medical bills, or school fees.</p>
+              </div>
+              <div class="space-y-3 mb-6">
+                <div class="flex items-start">
+                  <svg class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                  <span class="text-gray-700 text-sm">24hr Approval Process</span>
+                </div>
+                <div class="flex items-start">
+                  <svg class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                  <span class="text-gray-700 text-sm">Minimal Documentation</span>
+                </div>
+                <div class="flex items-start">
+                  <svg class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                  <span class="text-gray-700 text-sm">No Hidden Fees</span>
+                </div>
+                <div class="flex items-start">
+                  <svg class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                  <span class="text-gray-700 text-sm">Mobile Disbursement</span>
+                </div>
+              </div>
+              <div class="mt-auto pt-6 border-t border-gray-100">
+                <a href="contact.html" class="block w-full text-center border-2 border-primary text-primary font-bold py-3 rounded-lg group-hover:bg-primary group-hover:text-white group-hover:shadow-lg group-hover:scale-[1.02] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-primary/30" aria-label="Inquire about Emergency Quick Loans">Inquire Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Business Loans -->
+          <div class="group bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col h-full focus-within:ring-2 focus-within:ring-accent relative">
+            <div class="bg-primary p-6 flex justify-between items-center transition-colors group-hover:bg-primary/95">
+              <div class="bg-accent p-3 rounded-lg shadow-inner group-hover:scale-110 transition-transform duration-300">
+                <svg class="h-8 w-8 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>
+              </div>
+              <div class="text-right">
+                <p class="text-accent text-sm font-bold uppercase tracking-wider">Loan Amount</p>
+                <p class="text-white font-bold text-lg">KES 50,000 - 1M</p>
+              </div>
+            </div>
+            <div class="p-8 flex-grow flex flex-col">
+              <h3 class="text-2xl font-bold text-primary mb-4 font-heading group-hover:text-accent transition-colors">Business Loans</h3>
+              <p class="text-gray-600 mb-6 flex-grow leading-relaxed">Capital injection to help your business grow, restock, or expand operations.</p>
+              <div class="mb-6 bg-gray-50 p-4 rounded-lg border-l-4 border-accent">
+                <p class="text-sm font-bold text-gray-700 mb-1">Ideal For:</p>
+                <p class="text-sm text-gray-600 italic">SMEs, Shop owners, Contractors, and Suppliers.</p>
+              </div>
+              <div class="space-y-3 mb-6">
+                <div class="flex items-start">
+                  <svg class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                  <span class="text-gray-700 text-sm">Flexible Collateral Options</span>
+                </div>
+                <div class="flex items-start">
+                  <svg class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                  <span class="text-gray-700 text-sm">Repayment tied to cash flow</span>
+                </div>
+                <div class="flex items-start">
+                  <svg class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                  <span class="text-gray-700 text-sm">Top-up options available</span>
+                </div>
+                <div class="flex items-start">
+                  <svg class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                  <span class="text-gray-700 text-sm">Business advisory included</span>
+                </div>
+              </div>
+              <div class="mt-auto pt-6 border-t border-gray-100">
+                <a href="contact.html" class="block w-full text-center border-2 border-primary text-primary font-bold py-3 rounded-lg group-hover:bg-primary group-hover:text-white group-hover:shadow-lg group-hover:scale-[1.02] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-primary/30" aria-label="Inquire about Business Loans">Inquire Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Payroll Employee Loans -->
+          <div class="group bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col h-full focus-within:ring-2 focus-within:ring-accent relative">
+            <div class="bg-primary p-6 flex justify-between items-center transition-colors group-hover:bg-primary/95">
+              <div class="bg-accent p-3 rounded-lg shadow-inner group-hover:scale-110 transition-transform duration-300">
+                <svg class="h-8 w-8 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div class="text-right">
+                <p class="text-accent text-sm font-bold uppercase tracking-wider">Loan Amount</p>
+                <p class="text-white font-bold text-lg">Salary Based</p>
+              </div>
+            </div>
+            <div class="p-8 flex-grow flex flex-col">
+              <h3 class="text-2xl font-bold text-primary mb-4 font-heading group-hover:text-accent transition-colors">Payroll Employee Loans</h3>
+              <p class="text-gray-600 mb-6 flex-grow leading-relaxed">Check-off loans for employees of partnered organizations. Low interest rates and easy processing.</p>
+              <div class="mb-6 bg-gray-50 p-4 rounded-lg border-l-4 border-accent">
+                <p class="text-sm font-bold text-gray-700 mb-1">Ideal For:</p>
+                <p class="text-sm text-gray-600 italic">Salaried employees in civil service or private sector.</p>
+              </div>
+              <div class="space-y-3 mb-6">
+                <div class="flex items-start">
+                  <svg class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                  <span class="text-gray-700 text-sm">Direct Salary Deduction</span>
+                </div>
+                <div class="flex items-start">
+                  <svg class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                  <span class="text-gray-700 text-sm">Higher Loan Limits</span>
+                </div>
+                <div class="flex items-start">
+                  <svg class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                  <span class="text-gray-700 text-sm">Longer Repayment Periods</span>
+                </div>
+                <div class="flex items-start">
+                  <svg class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                  <span class="text-gray-700 text-sm">Buy-off from other lenders</span>
+                </div>
+              </div>
+              <div class="mt-auto pt-6 border-t border-gray-100">
+                <a href="contact.html" class="block w-full text-center border-2 border-primary text-primary font-bold py-3 rounded-lg group-hover:bg-primary group-hover:text-white group-hover:shadow-lg group-hover:scale-[1.02] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-primary/30" aria-label="Inquire about Payroll Employee Loans">Inquire Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Partnership Agency Financing -->
+          <div class="group bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col h-full focus-within:ring-2 focus-within:ring-accent relative">
+            <div class="bg-primary p-6 flex justify-between items-center transition-colors group-hover:bg-primary/95">
+              <div class="bg-accent p-3 rounded-lg shadow-inner group-hover:scale-110 transition-transform duration-300">
+                <svg class="h-8 w-8 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg>
+              </div>
+              <div class="text-right">
+                <p class="text-accent text-sm font-bold uppercase tracking-wider">Loan Amount</p>
+                <p class="text-white font-bold text-lg">Customized Limits</p>
+              </div>
+            </div>
+            <div class="p-8 flex-grow flex flex-col">
+              <h3 class="text-2xl font-bold text-primary mb-4 font-heading group-hover:text-accent transition-colors">Partnership Agency Financing</h3>
+              <p class="text-gray-600 mb-6 flex-grow leading-relaxed">Special financing for agents and partners to boost liquidity and operational capacity.</p>
+              <div class="mb-6 bg-gray-50 p-4 rounded-lg border-l-4 border-accent">
+                <p class="text-sm font-bold text-gray-700 mb-1">Ideal For:</p>
+                <p class="text-sm text-gray-600 italic">Mobile money agents, Bank agents, and Distribution partners.</p>
+              </div>
+              <div class="space-y-3 mb-6">
+                <div class="flex items-start">
+                  <svg class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                  <span class="text-gray-700 text-sm">Float Financing</span>
+                </div>
+                <div class="flex items-start">
+                  <svg class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                  <span class="text-gray-700 text-sm">Daily/Weekly Repayment</span>
+                </div>
+                <div class="flex items-start">
+                  <svg class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                  <span class="text-gray-700 text-sm">Growth-based limits</span>
+                </div>
+                <div class="flex items-start">
+                  <svg class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                  <span class="text-gray-700 text-sm">Networking opportunities</span>
+                </div>
+              </div>
+              <div class="mt-auto pt-6 border-t border-gray-100">
+                <a href="contact.html" class="block w-full text-center border-2 border-primary text-primary font-bold py-3 rounded-lg group-hover:bg-primary group-hover:text-white group-hover:shadow-lg group-hover:scale-[1.02] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-primary/30" aria-label="Inquire about Partnership Agency Financing">Inquire Now</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div class="mt-20 text-center">
+          <div class="bg-primary rounded-2xl p-12 text-white shadow-xl">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6 font-heading">Ready to Apply?</h2>
+            <p class="mb-8 text-gray-300">Contact us today via WhatsApp or visit our offices to get started.</p>
+            <a href="contact.html" class="inline-block bg-accent text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-primary transition-all shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-accent/50">Contact Us Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white pt-16 pb-8">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div>
+          <div class="mb-6">
+            <a href="index.html" class="inline-block">
+              <img src="assets/logo.svg" alt="LendPal Capital" class="h-14 w-auto bg-white rounded-lg p-2 object-contain">
+            </a>
+          </div>
+          <p class="text-gray-300 mb-6 text-sm leading-relaxed">To actualize dreams and create wealth through alternative financial solutions. We are dedicated to providing fast, reliable, and flexible financial services.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-300 hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent rounded p-1" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="#" class="text-gray-300 hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent rounded p-1" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="text-gray-300 hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent rounded p-1" aria-label="TikTok">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-6 border-b-2 border-accent inline-block pb-2">Quick Links</h3>
+          <ul class="space-y-3">
+            <li><a href="index.html" class="text-gray-300 hover:text-accent transition-colors">Home</a></li>
+            <li><a href="about.html" class="text-gray-300 hover:text-accent transition-colors">About Us</a></li>
+            <li><a href="products.html" class="text-gray-300 hover:text-accent transition-colors">Our Products</a></li>
+            <li><a href="partners.html" class="text-gray-300 hover:text-accent transition-colors">Become a Partner</a></li>
+            <li><a href="faq.html" class="text-gray-300 hover:text-accent transition-colors">FAQs</a></li>
+            <li><a href="contact.html" class="text-gray-300 hover:text-accent transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-6 border-b-2 border-accent inline-block pb-2">Contact Us</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <svg class="h-5 w-5 text-accent mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span class="text-gray-300 text-sm">Head Office: The Greenhouse, Ngong Road, Kilimani, Nairobi</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="h-5 w-5 text-accent mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span class="text-gray-300 text-sm">Nakuru Branch: Shawmut Plaza</span>
+            </li>
+            <li class="flex items-center">
+              <svg class="h-5 w-5 text-accent mr-3 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span class="text-gray-300 text-sm">254 722 676 200</span>
+            </li>
+            <li class="flex items-center">
+              <svg class="h-5 w-5 text-accent mr-3 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span class="text-gray-300 text-sm break-all">info@lendpalcapital.co.ke</span>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-6 border-b-2 border-accent inline-block pb-2">Working Hours</h3>
+          <ul class="space-y-2">
+            <li class="flex justify-between text-gray-300 text-sm"><span>Monday - Friday</span><span>8:00 AM - 4:00 PM</span></li>
+            <li class="flex justify-between text-gray-300 text-sm"><span>Saturday</span><span>Closed</span></li>
+            <li class="flex justify-between text-gray-300 text-sm"><span>Sunday</span><span>Closed</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 pt-8 text-center">
+        <p class="text-gray-400 text-sm">&copy; <span id="footer-year"></span> LendPal Capital. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/254722676200" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-40 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 flex items-center justify-center group" aria-label="Chat with us on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+    <span class="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 ease-in-out whitespace-nowrap ml-0 group-hover:ml-2 text-sm font-bold">Chat with us</span>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

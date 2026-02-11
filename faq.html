@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQs | LendPal Capital</title>
+  <meta name="description" content="Find answers to common questions about LendPal Capital loans, repayment terms, and financial services.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1c2e3b',
+            accent: '#fa9e20',
+            'gray-light': '#F9FAFB',
+            'gray-dark': '#6B7280',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Poppins', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="flex flex-col min-h-screen bg-white">
+  <header class="sticky top-0 z-50 bg-white shadow-md">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <a href="index.html" class="flex items-center space-x-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent p-1" aria-label="LendPal Capital Home">
+          <img src="assets/logo.svg" alt="LendPal Capital" class="h-16 w-auto object-contain">
+        </a>
+        <nav class="hidden md:flex space-x-8">
+          <a href="index.html" data-nav-link class="text-sm font-medium transition-colors hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent rounded px-2 py-1 text-primary">Home</a>
+          <a href="about.html" data-nav-link class="text-sm font-medium transition-colors hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent rounded px-2 py-1 text-primary">About Us</a>
+          <a href="products.html" data-nav-link class="text-sm font-medium transition-colors hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent rounded px-2 py-1 text-primary">Products</a>
+          <a href="partners.html" data-nav-link class="text-sm font-medium transition-colors hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent rounded px-2 py-1 text-primary">Partners</a>
+          <a href="faq.html" data-nav-link class="text-sm font-medium transition-colors hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent rounded px-2 py-1 text-primary">FAQs</a>
+          <a href="contact.html" data-nav-link class="text-sm font-medium transition-colors hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent rounded px-2 py-1 text-primary">Contact</a>
+        </nav>
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md text-primary hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent" aria-label="Open menu" aria-expanded="false">
+          <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+          <svg id="menu-icon-close" class="hidden" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg z-50">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="index.html" data-nav-link class="block px-3 py-4 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent">Home</a>
+        <a href="about.html" data-nav-link class="block px-3 py-4 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent">About Us</a>
+        <a href="products.html" data-nav-link class="block px-3 py-4 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent">Products</a>
+        <a href="partners.html" data-nav-link class="block px-3 py-4 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent">Partners</a>
+        <a href="faq.html" data-nav-link class="block px-3 py-4 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent">FAQs</a>
+        <a href="contact.html" data-nav-link class="block px-3 py-4 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    <div class="bg-gray-50 min-h-screen">
+      <div class="bg-primary text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+          <h1 class="text-4xl font-bold font-heading mb-4">Frequently Asked Questions</h1>
+          <p class="text-xl text-gray-300 max-w-2xl mx-auto">Find answers to common questions about our loans, repayment terms, and services.</p>
+        </div>
+      </div>
+
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="max-w-3xl mx-auto space-y-4">
+          <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+            <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+              <span class="font-bold text-primary text-lg">How long does the approval process take?</span>
+              <svg class="chevron-down text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              <svg class="chevron-up hidden text-accent" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+            </button>
+            <div class="faq-answer max-h-0 opacity-0 overflow-hidden">
+              <div class="px-6 pb-5 text-gray-600 border-t border-gray-100 pt-4 leading-relaxed">For emergency loans, we process approvals within 24 hours. Business loans typically take 24-48 hours depending on the documentation provided.</div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+            <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+              <span class="font-bold text-primary text-lg">What documents are required?</span>
+              <svg class="chevron-down text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              <svg class="chevron-up hidden text-accent" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+            </button>
+            <div class="faq-answer max-h-0 opacity-0 overflow-hidden">
+              <div class="px-6 pb-5 text-gray-600 border-t border-gray-100 pt-4 leading-relaxed">Generally, you will need your ID, KRA PIN, 6 months M-Pesa/Bank statements, and security/guarantor details. Requirements may vary by product.</div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+            <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+              <span class="font-bold text-primary text-lg">How do I repay my loan?</span>
+              <svg class="chevron-down text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              <svg class="chevron-up hidden text-accent" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+            </button>
+            <div class="faq-answer max-h-0 opacity-0 overflow-hidden">
+              <div class="px-6 pb-5 text-gray-600 border-t border-gray-100 pt-4 leading-relaxed">Loans can be repaid via M-Pesa Paybill or Bank Transfer. Details are provided upon loan disbursement.</div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+            <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+              <span class="font-bold text-primary text-lg">Are there penalties for late payment?</span>
+              <svg class="chevron-down text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              <svg class="chevron-up hidden text-accent" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+            </button>
+            <div class="faq-answer max-h-0 opacity-0 overflow-hidden">
+              <div class="px-6 pb-5 text-gray-600 border-t border-gray-100 pt-4 leading-relaxed">Yes, late payments attract a penalty fee. We encourage borrowers to communicate early if they foresee a delay to restructure payment plans.</div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+            <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+              <span class="font-bold text-primary text-lg">Do you offer loans to people with bad CRB ratings?</span>
+              <svg class="chevron-down text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              <svg class="chevron-up hidden text-accent" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+            </button>
+            <div class="faq-answer max-h-0 opacity-0 overflow-hidden">
+              <div class="px-6 pb-5 text-gray-600 border-t border-gray-100 pt-4 leading-relaxed">We evaluate each application individually. While credit history is a factor, we focus more on your current ability to repay and the collateral/security provided.</div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+            <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+              <span class="font-bold text-primary text-lg">Can I top up my existing loan?</span>
+              <svg class="chevron-down text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              <svg class="chevron-up hidden text-accent" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+            </button>
+            <div class="faq-answer max-h-0 opacity-0 overflow-hidden">
+              <div class="px-6 pb-5 text-gray-600 border-t border-gray-100 pt-4 leading-relaxed">Yes, top-ups are available for clients who have successfully repaid at least 50% of their existing loan and have a good repayment history.</div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+            <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+              <span class="font-bold text-primary text-lg">Do I need collateral for all loans?</span>
+              <svg class="chevron-down text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              <svg class="chevron-up hidden text-accent" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+            </button>
+            <div class="faq-answer max-h-0 opacity-0 overflow-hidden">
+              <div class="px-6 pb-5 text-gray-600 border-t border-gray-100 pt-4 leading-relaxed">Not all loans require physical collateral. Some smaller emergency loans or payroll loans may be unsecured or guaranteed by a guarantor, while larger business loans usually require collateral.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-20 text-center">
+          <div class="bg-white rounded-2xl p-12 shadow-lg border border-gray-100">
+            <svg class="h-16 w-16 text-accent mx-auto mb-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 font-heading text-primary">Still have questions?</h2>
+            <p class="mb-8 text-gray-600">Can't find the answer you're looking for? Please chat to our friendly team.</p>
+            <a href="contact.html" class="bg-primary text-white px-8 py-3 rounded-lg font-bold hover:bg-accent hover:text-white transition-all shadow-lg inline-block">Get in Touch</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-primary text-white pt-16 pb-8">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div>
+          <div class="mb-6"><a href="index.html" class="inline-block"><img src="assets/logo.svg" alt="LendPal Capital" class="h-14 w-auto bg-white rounded-lg p-2 object-contain"></a></div>
+          <p class="text-gray-300 mb-6 text-sm leading-relaxed">To actualize dreams and create wealth through alternative financial solutions. We are dedicated to providing fast, reliable, and flexible financial services.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-300 hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent rounded p-1" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="#" class="text-gray-300 hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent rounded p-1" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+            <a href="#" class="text-gray-300 hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent rounded p-1" aria-label="TikTok"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-6 border-b-2 border-accent inline-block pb-2">Quick Links</h3>
+          <ul class="space-y-3">
+            <li><a href="index.html" class="text-gray-300 hover:text-accent transition-colors">Home</a></li>
+            <li><a href="about.html" class="text-gray-300 hover:text-accent transition-colors">About Us</a></li>
+            <li><a href="products.html" class="text-gray-300 hover:text-accent transition-colors">Our Products</a></li>
+            <li><a href="partners.html" class="text-gray-300 hover:text-accent transition-colors">Become a Partner</a></li>
+            <li><a href="faq.html" class="text-gray-300 hover:text-accent transition-colors">FAQs</a></li>
+            <li><a href="contact.html" class="text-gray-300 hover:text-accent transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-6 border-b-2 border-accent inline-block pb-2">Contact Us</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start"><svg class="h-5 w-5 text-accent mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span class="text-gray-300 text-sm">Head Office: The Greenhouse, Ngong Road, Kilimani, Nairobi</span></li>
+            <li class="flex items-start"><svg class="h-5 w-5 text-accent mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span class="text-gray-300 text-sm">Nakuru Branch: Shawmut Plaza</span></li>
+            <li class="flex items-center"><svg class="h-5 w-5 text-accent mr-3 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="text-gray-300 text-sm">254 722 676 200</span></li>
+            <li class="flex items-center"><svg class="h-5 w-5 text-accent mr-3 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span class="text-gray-300 text-sm break-all">info@lendpalcapital.co.ke</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-6 border-b-2 border-accent inline-block pb-2">Working Hours</h3>
+          <ul class="space-y-2">
+            <li class="flex justify-between text-gray-300 text-sm"><span>Monday - Friday</span><span>8:00 AM - 4:00 PM</span></li>
+            <li class="flex justify-between text-gray-300 text-sm"><span>Saturday</span><span>Closed</span></li>
+            <li class="flex justify-between text-gray-300 text-sm"><span>Sunday</span><span>Closed</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 pt-8 text-center">
+        <p class="text-gray-400 text-sm">&copy; <span id="footer-year"></span> LendPal Capital. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/254722676200" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-40 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 flex items-center justify-center group" aria-label="Chat with us on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+    <span class="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 ease-in-out whitespace-nowrap ml-0 group-hover:ml-2 text-sm font-bold">Chat with us</span>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
