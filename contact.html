@@ -1,246 +1,907 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us | LendPal Capital</title>
-  <meta name="description" content="Contact LendPal Capital - Visit our offices in Nairobi or Nakuru, call us, or send us a message.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#1c2e3b',
-            accent: '#fa9e20',
-            'gray-light': '#F9FAFB',
-            'gray-dark': '#6B7280',
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | LendPal Capital</title>
+    <meta
+      name="description"
+      content="Contact LendPal Capital - Visit our offices in Nairobi or Nakuru, call us, or send us a message."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#1c2e3b',
+              accent: '#fa9e20',
+              'gray-light': '#F9FAFB',
+              'gray-dark': '#6B7280',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              heading: ['Poppins', 'sans-serif'],
+            },
           },
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            heading: ['Poppins', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
-  <link rel="stylesheet" href="css/custom.css">
-</head>
-<body class="flex flex-col min-h-screen bg-white">
-  <header class="sticky top-0 z-50 bg-white shadow-md">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-20">
-        <a href="index.html" class="flex items-center space-x-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent p-1" aria-label="LendPal Capital Home">
-          <img src="assets/logo.svg" alt="LendPal Capital" class="h-16 w-auto object-contain">
-        </a>
-        <nav class="hidden md:flex space-x-8">
-          <a href="index.html" data-nav-link class="text-sm font-medium transition-colors hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent rounded px-2 py-1 text-primary">Home</a>
-          <a href="about.html" data-nav-link class="text-sm font-medium transition-colors hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent rounded px-2 py-1 text-primary">About Us</a>
-          <a href="products.html" data-nav-link class="text-sm font-medium transition-colors hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent rounded px-2 py-1 text-primary">Products</a>
-          <a href="partners.html" data-nav-link class="text-sm font-medium transition-colors hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent rounded px-2 py-1 text-primary">Partners</a>
-          <a href="faq.html" data-nav-link class="text-sm font-medium transition-colors hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent rounded px-2 py-1 text-primary">FAQs</a>
-          <a href="contact.html" data-nav-link class="text-sm font-medium transition-colors hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent rounded px-2 py-1 text-primary">Contact</a>
-        </nav>
-        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md text-primary hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent" aria-label="Open menu" aria-expanded="false">
-          <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-          <svg id="menu-icon-close" class="hidden" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-        </button>
-      </div>
-    </div>
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg z-50">
-      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-        <a href="index.html" data-nav-link class="block px-3 py-4 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent">Home</a>
-        <a href="about.html" data-nav-link class="block px-3 py-4 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent">About Us</a>
-        <a href="products.html" data-nav-link class="block px-3 py-4 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent">Products</a>
-        <a href="partners.html" data-nav-link class="block px-3 py-4 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent">Partners</a>
-        <a href="faq.html" data-nav-link class="block px-3 py-4 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent">FAQs</a>
-        <a href="contact.html" data-nav-link class="block px-3 py-4 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent">Contact</a>
-      </div>
-    </div>
-  </header>
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="css/custom.css" />
+  </head>
+  <body class="flex flex-col min-h-screen bg-white">
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <a
+            href="index.html"
+            class="flex items-center space-x-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent p-1"
+            aria-label="LendPal Capital Home"
+          >
+            <img
+              src="assets/logo.svg"
+              alt="LendPal Capital"
+              class="h-16 w-auto object-contain"
+            />
+          </a>
+          <nav class="hidden md:flex space-x-8">
+            <a
+              href="index.html"
+              data-nav-link
+              class="text-sm font-medium transition-colors hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent rounded px-2 py-1 text-primary"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              data-nav-link
+              class="text-sm font-medium transition-colors hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent rounded px-2 py-1 text-primary"
+              >About Us</a
+            >
+            <a
+              href="products.html"
+              data-nav-link
+              class="text-sm font-medium transition-colors hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent rounded px-2 py-1 text-primary"
+              >Products</a
+            >
 
-  <main class="flex-grow">
-    <div class="bg-gray-50 min-h-screen">
-      <div class="bg-primary text-white py-16">
-        <div class="container mx-auto px-4 text-center">
-          <h1 class="text-4xl font-bold font-heading mb-4">Contact Us</h1>
-          <p class="text-xl text-gray-300">We'd love to hear from you. Reach out today.</p>
+            <a
+              href="faq.html"
+              data-nav-link
+              class="text-sm font-medium transition-colors hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent rounded px-2 py-1 text-primary"
+              >FAQs</a
+            >
+            <a
+              href="contact.html"
+              data-nav-link
+              class="text-sm font-medium transition-colors hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent rounded px-2 py-1 text-primary"
+              >Contact</a
+            >
+          </nav>
+          <button
+            id="mobile-menu-btn"
+            class="md:hidden p-2 rounded-md text-primary hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <svg
+              id="menu-icon-open"
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="4" x2="20" y1="12" y2="12" />
+              <line x1="4" x2="20" y1="6" y2="6" />
+              <line x1="4" x2="20" y1="18" y2="18" />
+            </svg>
+            <svg
+              id="menu-icon-close"
+              class="hidden"
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M18 6 6 18" />
+              <path d="m6 6 12 12" />
+            </svg>
+          </button>
         </div>
       </div>
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg z-50"
+      >
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a
+            href="index.html"
+            data-nav-link
+            class="block px-3 py-4 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            data-nav-link
+            class="block px-3 py-4 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent"
+            >About Us</a
+          >
+          <a
+            href="products.html"
+            data-nav-link
+            class="block px-3 py-4 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent"
+            >Products</a
+          >
 
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8 -mt-8 mb-20">
-        <div class="bg-white rounded-xl shadow-xl overflow-hidden">
-          <div class="grid grid-cols-1 lg:grid-cols-2">
-            <div class="bg-primary text-white p-8 md:p-12">
-              <h2 class="text-2xl font-bold font-heading mb-8">Get in Touch</h2>
-              <div class="space-y-8">
-                <div class="flex items-start">
-                  <div class="bg-white/10 p-3 rounded-lg mr-4">
-                    <svg class="h-6 w-6 text-accent" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <a
+            href="faq.html"
+            data-nav-link
+            class="block px-3 py-4 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent"
+            >FAQs</a
+          >
+          <a
+            href="contact.html"
+            data-nav-link
+            class="block px-3 py-4 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-accent"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-grow">
+      <div class="bg-gray-50 min-h-screen">
+        <div class="bg-primary text-white py-16">
+          <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl font-bold font-heading mb-4">Contact Us</h1>
+            <p class="text-xl text-gray-300">
+              We'd love to hear from you. Reach out today.
+            </p>
+          </div>
+        </div>
+
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 -mt-8 mb-20">
+          <div class="bg-white rounded-xl shadow-xl overflow-hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-2">
+              <div class="bg-primary text-white p-8 md:p-12">
+                <h2 class="text-2xl font-bold font-heading mb-8">
+                  Get in Touch
+                </h2>
+                <div class="space-y-8">
+                  <div class="flex items-start">
+                    <div class="bg-white/10 p-3 rounded-lg mr-4">
+                      <svg
+                        class="h-6 w-6 text-accent"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"
+                        />
+                        <circle cx="12" cy="10" r="3" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 class="font-bold text-lg mb-1">Head Office</h3>
+                      <p class="text-gray-300 leading-relaxed">
+                        The Greenhouse, Ngong Road<br />Kilimani, Nairobi
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 class="font-bold text-lg mb-1">Head Office</h3>
-                    <p class="text-gray-300 leading-relaxed">The Greenhouse, Ngong Road<br>Kilimani, Nairobi</p>
+                  <div class="flex items-start">
+                    <div class="bg-white/10 p-3 rounded-lg mr-4">
+                      <svg
+                        class="h-6 w-6 text-accent"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"
+                        />
+                        <circle cx="12" cy="10" r="3" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 class="font-bold text-lg mb-1">Nakuru Branch</h3>
+                      <p class="text-gray-300 leading-relaxed">
+                        Shawmut Plaza<br />Nakuru Town
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <div class="bg-white/10 p-3 rounded-lg mr-4">
+                      <svg
+                        class="h-6 w-6 text-accent"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"
+                        />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 class="font-bold text-lg mb-1">Phone / WhatsApp</h3>
+                      <p class="text-gray-300">0115211600</p>
+                      <a
+                        href="https://wa.me/0115211600"
+                        class="text-accent text-sm hover:underline mt-1 inline-block focus:outline-none focus:ring-2 focus:ring-accent rounded px-1 -ml-1"
+                        >Click to chat</a
+                      >
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <div class="bg-white/10 p-3 rounded-lg mr-4">
+                      <svg
+                        class="h-6 w-6 text-accent"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect width="20" height="16" x="2" y="4" rx="2" />
+                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 class="font-bold text-lg mb-1">Email</h3>
+                      <p class="text-gray-300">info@lendpalcapital.co.ke</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <div class="bg-white/10 p-3 rounded-lg mr-4">
+                      <svg
+                        class="h-6 w-6 text-accent"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <circle cx="12" cy="12" r="10" />
+                        <polyline points="12 6 12 12 16 14" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 class="font-bold text-lg mb-1">Business Hours</h3>
+                      <p class="text-gray-300">Mon - Fri: 8:00 AM - 4:00 PM</p>
+                      <p class="text-gray-400 text-sm">
+                        Closed on Weekends &amp; Public Holidays
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <div class="flex items-start">
-                  <div class="bg-white/10 p-3 rounded-lg mr-4">
-                    <svg class="h-6 w-6 text-accent" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+
+              <div class="p-8 md:p-12 bg-white relative">
+                <div
+                  id="contact-success"
+                  class="hidden h-full flex flex-col items-center justify-center text-center animate-fade-in"
+                >
+                  <div
+                    class="mx-auto flex items-center justify-center h-20 w-20 rounded-full bg-green-100 mb-6"
+                  >
+                    <svg
+                      class="h-12 w-12 text-green-600"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                      <path d="m9 11 3 3L22 4" />
+                    </svg>
                   </div>
+                  <h3 class="text-2xl font-bold text-primary mb-2">
+                    Message Sent!
+                  </h3>
+                  <p class="text-gray-500 mb-8 max-w-sm">
+                    Thank you for contacting LendPal Capital. Our team has
+                    received your inquiry and will get back to you shortly.
+                  </p>
+                  <button
+                    id="contact-form-reset"
+                    class="text-accent font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-accent rounded px-2 py-1"
+                  >
+                    Send another message
+                  </button>
+                </div>
+
+                <form id="contact-form" class="space-y-6">
+                  <h2 class="text-2xl font-bold font-heading text-primary mb-2">
+                    Send us a Message
+                  </h2>
+                  <p class="text-gray-500 mb-8">
+                    Whether you have a question about products, repayment, or
+                    anything else, our team is ready to answer all your
+                    questions.
+                  </p>
+
                   <div>
-                    <h3 class="font-bold text-lg mb-1">Nakuru Branch</h3>
-                    <p class="text-gray-300 leading-relaxed">Shawmut Plaza<br>Nakuru Town</p>
+                    <label
+                      for="contact-name"
+                      class="block text-sm font-bold text-gray-700 mb-1"
+                      >Full Name</label
+                    >
+                    <input
+                      required
+                      id="contact-name"
+                      type="text"
+                      name="name"
+                      class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all placeholder-gray-400"
+                      placeholder="e.g. John Doe"
+                    />
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label
+                        for="contact-email"
+                        class="block text-sm font-bold text-gray-700 mb-1"
+                        >Email Address</label
+                      >
+                      <input
+                        required
+                        id="contact-email"
+                        type="email"
+                        name="email"
+                        class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all placeholder-gray-400"
+                        placeholder="e.g. john@example.com"
+                      />
+                    </div>
+                    <div>
+                      <label
+                        for="contact-phone"
+                        class="block text-sm font-bold text-gray-700 mb-1"
+                        >Phone Number</label
+                      >
+                      <input
+                        required
+                        id="contact-phone"
+                        type="tel"
+                        name="phone"
+                        class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all placeholder-gray-400"
+                        placeholder="e.g. 0712 345 678"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label
+                      for="contact-loanAmount"
+                      class="block text-sm font-bold text-gray-700 mb-1"
+                      >Desired Loan Amount
+                      <span class="text-gray-400 font-normal text-xs ml-1"
+                        >(Optional)</span
+                      ></label
+                    >
+                    <input
+                      type="text"
+                      id="contact-loanAmount"
+                      name="loanAmount"
+                      class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all placeholder-gray-400"
+                      placeholder="e.g. KES 50,000"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      for="contact-message"
+                      class="block text-sm font-bold text-gray-700 mb-1"
+                      >Message</label
+                    >
+                    <textarea
+                      required
+                      id="contact-message"
+                      name="message"
+                      rows="4"
+                      class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all placeholder-gray-400"
+                      placeholder="How can we help you today?"
+                    ></textarea>
+                  </div>
+
+                  <button
+                    type="submit"
+                    class="w-full bg-accent text-white font-bold py-4 rounded-lg hover:bg-opacity-90 hover:-translate-y-1 transition-all shadow-md flex justify-center items-center group focus:outline-none focus:ring-4 focus:ring-accent/50"
+                  >
+                    <svg
+                      class="w-5 h-5 mr-2 group-hover:scale-110 transition-transform"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="m22 2-7 20-4-9-9-4Z" />
+                      <path d="M22 2 11 13" />
+                    </svg>
+                    Send Message
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Our Locations Section -->
+          <div class="mt-16">
+            <h2
+              class="text-3xl font-bold font-heading text-primary text-center mb-12"
+            >
+              Our Locations
+            </h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <!-- Nairobi Head Office -->
+              <div class="bg-white rounded-xl shadow-xl overflow-hidden">
+                <div class="p-6 bg-primary text-white">
+                  <div class="flex items-center">
+                    <svg
+                      class="h-8 w-8 text-accent mr-3"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"
+                      />
+                      <circle cx="12" cy="10" r="3" />
+                    </svg>
+                    <div>
+                      <h3 class="text-xl font-bold">Nairobi Head Office</h3>
+                      <p class="text-gray-300 text-sm">
+                        The Greenhouse, Ngong Road, Kilimani
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <div class="flex items-start">
-                  <div class="bg-white/10 p-3 rounded-lg mr-4">
-                    <svg class="h-6 w-6 text-accent" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                  </div>
-                  <div>
-                    <h3 class="font-bold text-lg mb-1">Phone / WhatsApp</h3>
-                    <p class="text-gray-300">254 722 676 200</p>
-                    <a href="https://wa.me/254722676200" class="text-accent text-sm hover:underline mt-1 inline-block focus:outline-none focus:ring-2 focus:ring-accent rounded px-1 -ml-1">Click to chat</a>
+                <div class="h-64 w-full">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8196!2d36.7846!3d-1.2987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f109dcb3d6a1b%3A0x7d3a9f0e3e4b5c6d!2sThe%20Greenhouse%2C%20Ngong%20Rd%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1700000000000!5m2!1sen!2ske"
+                    width="100%"
+                    height="100%"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Nairobi Head Office Location"
+                  ></iframe>
+                </div>
+                <div class="p-6 bg-gray-50">
+                  <div class="flex flex-col sm:flex-row gap-3">
+                    <a
+                      href="https://wa.me/0115211600"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="flex-1 bg-[#25D366] text-white font-semibold py-3 px-4 rounded-lg hover:bg-opacity-90 transition-colors flex items-center justify-center"
+                    >
+                      <svg
+                        class="h-5 w-5 mr-2"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        stroke="none"
+                      >
+                        <path
+                          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                        />
+                      </svg>
+                      Chat on WhatsApp
+                    </a>
+                    <a
+                      href="https://www.google.com/maps/dir//The+Greenhouse,+Ngong+Rd,+Nairobi"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="flex-1 bg-accent text-white font-semibold py-3 px-4 rounded-lg hover:bg-opacity-90 transition-colors flex items-center justify-center"
+                    >
+                      <svg
+                        class="h-5 w-5 mr-2"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"
+                        />
+                        <circle cx="12" cy="10" r="3" />
+                      </svg>
+                      Get Directions
+                    </a>
                   </div>
                 </div>
-                <div class="flex items-start">
-                  <div class="bg-white/10 p-3 rounded-lg mr-4">
-                    <svg class="h-6 w-6 text-accent" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                  </div>
-                  <div>
-                    <h3 class="font-bold text-lg mb-1">Email</h3>
-                    <p class="text-gray-300">info@lendpalcapital.co.ke</p>
+              </div>
+
+              <!-- Nakuru Branch -->
+              <div class="bg-white rounded-xl shadow-xl overflow-hidden">
+                <div class="p-6 bg-primary text-white">
+                  <div class="flex items-center">
+                    <svg
+                      class="h-8 w-8 text-accent mr-3"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"
+                      />
+                      <circle cx="12" cy="10" r="3" />
+                    </svg>
+                    <div>
+                      <h3 class="text-xl font-bold">Nakuru Branch</h3>
+                      <p class="text-gray-300 text-sm">
+                        Shawmut Plaza, Nakuru Town
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <div class="flex items-start">
-                  <div class="bg-white/10 p-3 rounded-lg mr-4">
-                    <svg class="h-6 w-6 text-accent" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                  </div>
-                  <div>
-                    <h3 class="font-bold text-lg mb-1">Business Hours</h3>
-                    <p class="text-gray-300">Mon - Fri: 8:00 AM - 4:00 PM</p>
-                    <p class="text-gray-400 text-sm">Closed on Weekends &amp; Public Holidays</p>
+                <div class="h-64 w-full">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8176!2d36.0686!3d-0.3037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18298d8cf6f3f0f5%3A0x7d3a9f0e3e4b5c6d!2sShawmut%20Plaza%2C%20Nakuru!5e0!3m2!1sen!2ske!4v1700000000000!5m2!1sen!2ske"
+                    width="100%"
+                    height="100%"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Nakuru Branch Location"
+                  ></iframe>
+                </div>
+                <div class="p-6 bg-gray-50">
+                  <div class="flex flex-col sm:flex-row gap-3">
+                    <a
+                      href="https://wa.me/0115211600"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="flex-1 bg-[#25D366] text-white font-semibold py-3 px-4 rounded-lg hover:bg-opacity-90 transition-colors flex items-center justify-center"
+                    >
+                      <svg
+                        class="h-5 w-5 mr-2"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        stroke="none"
+                      >
+                        <path
+                          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                        />
+                      </svg>
+                      Chat on WhatsApp
+                    </a>
+                    <a
+                      href="https://www.google.com/maps/dir//Shawmut+Plaza,+Nakuru"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="flex-1 bg-accent text-white font-semibold py-3 px-4 rounded-lg hover:bg-opacity-90 transition-colors flex items-center justify-center"
+                    >
+                      <svg
+                        class="h-5 w-5 mr-2"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"
+                        />
+                        <circle cx="12" cy="10" r="3" />
+                      </svg>
+                      Get Directions
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </main>
 
-            <div class="p-8 md:p-12 bg-white relative">
-              <div id="contact-success" class="hidden h-full flex flex-col items-center justify-center text-center animate-fade-in">
-                <div class="mx-auto flex items-center justify-center h-20 w-20 rounded-full bg-green-100 mb-6">
-                  <svg class="h-12 w-12 text-green-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
-                </div>
-                <h3 class="text-2xl font-bold text-primary mb-2">Message Sent!</h3>
-                <p class="text-gray-500 mb-8 max-w-sm">Thank you for contacting LendPal Capital. Our team has received your inquiry and will get back to you shortly.</p>
-                <button id="contact-form-reset" class="text-accent font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-accent rounded px-2 py-1">Send another message</button>
-              </div>
-
-              <form id="contact-form" class="space-y-6">
-                <h2 class="text-2xl font-bold font-heading text-primary mb-2">Send us a Message</h2>
-                <p class="text-gray-500 mb-8">Whether you have a question about products, repayment, or anything else, our team is ready to answer all your questions.</p>
-
-                <div>
-                  <label for="contact-name" class="block text-sm font-bold text-gray-700 mb-1">Full Name</label>
-                  <input required id="contact-name" type="text" name="name" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all placeholder-gray-400" placeholder="e.g. John Doe">
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label for="contact-email" class="block text-sm font-bold text-gray-700 mb-1">Email Address</label>
-                    <input required id="contact-email" type="email" name="email" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all placeholder-gray-400" placeholder="e.g. john@example.com">
-                  </div>
-                  <div>
-                    <label for="contact-phone" class="block text-sm font-bold text-gray-700 mb-1">Phone Number</label>
-                    <input required id="contact-phone" type="tel" name="phone" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all placeholder-gray-400" placeholder="e.g. 0712 345 678">
-                  </div>
-                </div>
-
-                <div>
-                  <label for="contact-loanAmount" class="block text-sm font-bold text-gray-700 mb-1">Desired Loan Amount <span class="text-gray-400 font-normal text-xs ml-1">(Optional)</span></label>
-                  <input type="text" id="contact-loanAmount" name="loanAmount" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all placeholder-gray-400" placeholder="e.g. KES 50,000">
-                </div>
-
-                <div>
-                  <label for="contact-message" class="block text-sm font-bold text-gray-700 mb-1">Message</label>
-                  <textarea required id="contact-message" name="message" rows="4" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all placeholder-gray-400" placeholder="How can we help you today?"></textarea>
-                </div>
-
-                <button type="submit" class="w-full bg-accent text-white font-bold py-4 rounded-lg hover:bg-opacity-90 hover:-translate-y-1 transition-all shadow-md flex justify-center items-center group focus:outline-none focus:ring-4 focus:ring-accent/50">
-                  <svg class="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
-                  Send Message
-                </button>
-              </form>
+    <footer class="bg-primary text-white pt-16 pb-8">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <div>
+            <div class="mb-6">
+              <a href="index.html" class="inline-block"
+                ><img
+                  src="assets/logo.svg"
+                  alt="LendPal Capital"
+                  class="h-14 w-auto bg-white rounded-lg p-2 object-contain"
+              /></a>
+            </div>
+            <p class="text-gray-300 mb-6 text-sm leading-relaxed">
+              To actualize dreams and create wealth through alternative
+              financial solutions. We are dedicated to providing fast, reliable,
+              and flexible financial services.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="text-gray-300 hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent rounded p-1"
+                aria-label="LinkedIn"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                  />
+                  <rect width="4" height="12" x="2" y="9" />
+                  <circle cx="4" cy="4" r="2" /></svg
+              ></a>
+              <a
+                href="#"
+                class="text-gray-300 hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent rounded p-1"
+                aria-label="Instagram"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></svg
+              ></a>
+              <a
+                href="#"
+                class="text-gray-300 hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent rounded p-1"
+                aria-label="TikTok"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" /></svg
+              ></a>
             </div>
           </div>
-        </div>
+          <div>
+            <h3
+              class="text-lg font-bold mb-6 border-b-2 border-accent inline-block pb-2"
+            >
+              Quick Links
+            </h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-gray-300 hover:text-accent transition-colors"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="text-gray-300 hover:text-accent transition-colors"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="products.html"
+                  class="text-gray-300 hover:text-accent transition-colors"
+                  >Our Products</a
+                >
+              </li>
 
-        <div class="mt-12 bg-gray-200 h-96 rounded-xl shadow-inner flex items-center justify-center relative overflow-hidden group">
-          <div class="absolute inset-0 bg-gray-300 animate-pulse"></div>
-          <div class="relative z-10 text-center p-6 bg-white/80 rounded-xl backdrop-blur-sm">
-            <svg class="h-12 w-12 text-primary mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-            <h3 class="text-xl font-bold text-primary">Visit Us at The Greenhouse</h3>
-            <p class="text-gray-600">Ngong Road, Nairobi</p>
-            <a href="https://goo.gl/maps/placeholder" target="_blank" rel="noreferrer" class="mt-4 inline-block text-accent font-bold hover:underline focus:outline-none focus:ring-2 focus:ring-accent rounded px-2">View on Google Maps</a>
+              <li>
+                <a
+                  href="faq.html"
+                  class="text-gray-300 hover:text-accent transition-colors"
+                  >FAQs</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-gray-300 hover:text-accent transition-colors"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3
+              class="text-lg font-bold mb-6 border-b-2 border-accent inline-block pb-2"
+            >
+              Contact Us
+            </h3>
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <svg
+                  class="h-5 w-5 text-accent mr-3 mt-1 flex-shrink-0"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                  <circle cx="12" cy="10" r="3" /></svg
+                ><span class="text-gray-300 text-sm"
+                  >Head Office: The Greenhouse, Ngong Road, Kilimani,
+                  Nairobi</span
+                >
+              </li>
+              <li class="flex items-start">
+                <svg
+                  class="h-5 w-5 text-accent mr-3 mt-1 flex-shrink-0"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                  <circle cx="12" cy="10" r="3" /></svg
+                ><span class="text-gray-300 text-sm"
+                  >Nakuru Branch: Shawmut Plaza</span
+                >
+              </li>
+              <li class="flex items-center">
+                <svg
+                  class="h-5 w-5 text-accent mr-3 flex-shrink-0"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"
+                  /></svg
+                ><span class="text-gray-300 text-sm">0115211600</span>
+              </li>
+              <li class="flex items-center">
+                <svg
+                  class="h-5 w-5 text-accent mr-3 flex-shrink-0"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect width="20" height="16" x="2" y="4" rx="2" />
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg
+                ><span class="text-gray-300 text-sm break-all"
+                  >info@lendpalcapital.co.ke</span
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3
+              class="text-lg font-bold mb-6 border-b-2 border-accent inline-block pb-2"
+            >
+              Working Hours
+            </h3>
+            <ul class="space-y-2">
+              <li class="flex justify-between text-gray-300 text-sm">
+                <span>Monday - Friday</span><span>8:00 AM - 4:00 PM</span>
+              </li>
+              <li class="flex justify-between text-gray-300 text-sm">
+                <span>Saturday</span><span>Closed</span>
+              </li>
+              <li class="flex justify-between text-gray-300 text-sm">
+                <span>Sunday</span><span>Closed</span>
+              </li>
+            </ul>
           </div>
         </div>
-      </div>
-    </div>
-  </main>
-
-  <footer class="bg-primary text-white pt-16 pb-8">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-        <div>
-          <div class="mb-6"><a href="index.html" class="inline-block"><img src="assets/logo.svg" alt="LendPal Capital" class="h-14 w-auto bg-white rounded-lg p-2 object-contain"></a></div>
-          <p class="text-gray-300 mb-6 text-sm leading-relaxed">To actualize dreams and create wealth through alternative financial solutions. We are dedicated to providing fast, reliable, and flexible financial services.</p>
-          <div class="flex space-x-4">
-            <a href="#" class="text-gray-300 hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent rounded p-1" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
-            <a href="#" class="text-gray-300 hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent rounded p-1" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
-            <a href="#" class="text-gray-300 hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent rounded p-1" aria-label="TikTok"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg></a>
-          </div>
-        </div>
-        <div>
-          <h3 class="text-lg font-bold mb-6 border-b-2 border-accent inline-block pb-2">Quick Links</h3>
-          <ul class="space-y-3">
-            <li><a href="index.html" class="text-gray-300 hover:text-accent transition-colors">Home</a></li>
-            <li><a href="about.html" class="text-gray-300 hover:text-accent transition-colors">About Us</a></li>
-            <li><a href="products.html" class="text-gray-300 hover:text-accent transition-colors">Our Products</a></li>
-            <li><a href="partners.html" class="text-gray-300 hover:text-accent transition-colors">Become a Partner</a></li>
-            <li><a href="faq.html" class="text-gray-300 hover:text-accent transition-colors">FAQs</a></li>
-            <li><a href="contact.html" class="text-gray-300 hover:text-accent transition-colors">Contact Us</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="text-lg font-bold mb-6 border-b-2 border-accent inline-block pb-2">Contact Us</h3>
-          <ul class="space-y-4">
-            <li class="flex items-start"><svg class="h-5 w-5 text-accent mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span class="text-gray-300 text-sm">Head Office: The Greenhouse, Ngong Road, Kilimani, Nairobi</span></li>
-            <li class="flex items-start"><svg class="h-5 w-5 text-accent mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span class="text-gray-300 text-sm">Nakuru Branch: Shawmut Plaza</span></li>
-            <li class="flex items-center"><svg class="h-5 w-5 text-accent mr-3 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="text-gray-300 text-sm">254 722 676 200</span></li>
-            <li class="flex items-center"><svg class="h-5 w-5 text-accent mr-3 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span class="text-gray-300 text-sm break-all">info@lendpalcapital.co.ke</span></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="text-lg font-bold mb-6 border-b-2 border-accent inline-block pb-2">Working Hours</h3>
-          <ul class="space-y-2">
-            <li class="flex justify-between text-gray-300 text-sm"><span>Monday - Friday</span><span>8:00 AM - 4:00 PM</span></li>
-            <li class="flex justify-between text-gray-300 text-sm"><span>Saturday</span><span>Closed</span></li>
-            <li class="flex justify-between text-gray-300 text-sm"><span>Sunday</span><span>Closed</span></li>
-          </ul>
+        <div class="border-t border-gray-700 pt-8 text-center">
+          <p class="text-gray-400 text-sm">
+            &copy; <span id="footer-year"></span> LendPal Capital. All rights
+            reserved.
+          </p>
         </div>
       </div>
-      <div class="border-t border-gray-700 pt-8 text-center">
-        <p class="text-gray-400 text-sm">&copy; <span id="footer-year"></span> LendPal Capital. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
-  <a href="https://wa.me/254722676200" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-40 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 flex items-center justify-center group" aria-label="Chat with us on WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
-    <span class="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 ease-in-out whitespace-nowrap ml-0 group-hover:ml-2 text-sm font-bold">Chat with us</span>
-  </a>
+    <a
+      href="https://wa.me/0115211600"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="fixed bottom-6 right-6 z-40 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 flex items-center justify-center group"
+      aria-label="Chat with us on WhatsApp"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="28"
+        height="28"
+        viewBox="0 0 24 24"
+        fill="white"
+        stroke="white"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+      </svg>
+      <span
+        class="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 ease-in-out whitespace-nowrap ml-0 group-hover:ml-2 text-sm font-bold"
+        >Chat with us</span
+      >
+    </a>
 
-  <script src="js/main.js"></script>
-</body>
+    <script src="js/main.js"></script>
+  </body>
 </html>

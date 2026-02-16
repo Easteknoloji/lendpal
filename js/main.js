@@ -138,6 +138,38 @@ function initForm(formId, successId) {
     submitBtn.innerHTML =
       '<svg class="animate-spin h-5 w-5 mr-2 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path></svg>Submitting...';
 
+    // Special handling for contact form - forward to WhatsApp
+    if (formId === 'contact-form') {
+      var name = document.getElementById('contact-name').value;
+      var email = document.getElementById('contact-email').value;
+      var phone = document.getElementById('contact-phone').value;
+      var loanAmount = document.getElementById('contact-loanAmount').value;
+      var message = document.getElementById('contact-message').value;
+
+      var whatsappMessage =
+        'Hello LendPal Capital,\n\nI would like to inquire about your services.\n\n' +
+        '*Name:* ' +
+        name +
+        '\n' +
+        '*Email:* ' +
+        email +
+        '\n' +
+        '*Phone:* ' +
+        phone +
+        '\n';
+
+      if (loanAmount) {
+        whatsappMessage += '*Desired Loan Amount:* ' + loanAmount + '\n';
+      }
+
+      whatsappMessage +=
+        '*Message:* ' + message + '\n\n' + 'Please get back to me. Thank you!';
+
+      var whatsappUrl =
+        'https://wa.me/0115211600?text=' + encodeURIComponent(whatsappMessage);
+      window.open(whatsappUrl, '_blank');
+    }
+
     setTimeout(function () {
       form.classList.add('hidden');
       success.classList.remove('hidden');
