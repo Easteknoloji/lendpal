@@ -121,72 +121,51 @@ function initFAQAccordion() {
 }
 
 /* ===========================
-   Form Submission Handlers
+   Contact Form Handler
    =========================== */
-function initForm(formId, successId) {
-  var form = document.getElementById(formId);
-  var success = document.getElementById(successId);
-  if (!form || !success) return;
+function initContactForm() {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     var submitBtn = form.querySelector('button[type="submit"]');
     var btnOriginal = submitBtn.innerHTML;
 
-    // Disable and show spinner
     submitBtn.disabled = true;
     submitBtn.innerHTML =
-      '<svg class="animate-spin h-5 w-5 mr-2 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path></svg>Submitting...';
+      '<svg class="animate-spin h-6 w-6 mr-2 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path></svg>Processing Request...';
 
-    // Special handling for contact form - forward to WhatsApp
-    if (formId === 'contact-form') {
-      var name = document.getElementById('contact-name').value;
-      var email = document.getElementById('contact-email').value;
-      var phone = document.getElementById('contact-phone').value;
-      var loanAmount = document.getElementById('contact-loanAmount').value;
-      var message = document.getElementById('contact-message').value;
+    var name = document.getElementById('contact-name').value;
+    var email = document.getElementById('contact-email').value;
+    var phone = document.getElementById('contact-phone').value;
+    var subjectEl = document.getElementById('contact-subject');
+    var subject = subjectEl ? subjectEl.value : 'General Inquiry';
+    var loanAmount = document.getElementById('contact-loanAmount').value;
+    var message = document.getElementById('contact-message').value;
 
-      var whatsappMessage =
-        'Hello LendPal Capital,\n\nI would like to inquire about your services.\n\n' +
-        '*Name:* ' +
-        name +
-        '\n' +
-        '*Email:* ' +
-        email +
-        '\n' +
-        '*Phone:* ' +
-        phone +
-        '\n';
+    var messageText =
+      '*New Website Enquiry*\n' +
+      '--------------------------------\n' +
+      '*Subject:* ' + subject + '\n' +
+      '*Name:* ' + name + '\n' +
+      '*Email:* ' + email + '\n' +
+      '*Phone:* ' + phone + '\n' +
+      (loanAmount ? '*Desired Amount:* ' + loanAmount + '\n' : '') +
+      '*Message:*\n' +
+      message + '\n' +
+      '--------------------------------';
 
-      if (loanAmount) {
-        whatsappMessage += '*Desired Loan Amount:* ' + loanAmount + '\n';
-      }
+    var whatsappUrl =
+      'https://api.whatsapp.com/send?phone=254115211600&text=' +
+      encodeURIComponent(messageText);
 
-      whatsappMessage +=
-        '*Message:* ' + message + '\n\n' + 'Please get back to me. Thank you!';
+    window.open(whatsappUrl, '_blank');
 
-      var whatsappUrl =
-        'https://wa.me/0115211600?text=' + encodeURIComponent(whatsappMessage);
-      window.open(whatsappUrl, '_blank');
-    }
-
-    setTimeout(function () {
-      form.classList.add('hidden');
-      success.classList.remove('hidden');
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = btnOriginal;
-    }, 2000);
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = btnOriginal;
+    form.reset();
   });
-
-  // Reset button
-  var resetBtn = document.getElementById(formId + '-reset');
-  if (resetBtn) {
-    resetBtn.addEventListener('click', function () {
-      success.classList.add('hidden');
-      form.classList.remove('hidden');
-      form.reset();
-    });
-  }
 }
 
 /* ===========================
@@ -197,8 +176,7 @@ document.addEventListener('DOMContentLoaded', function () {
   initMobileMenu();
   initCarousel();
   initFAQAccordion();
-  initForm('partner-form', 'partner-success');
-  initForm('contact-form', 'contact-success');
+  initContactForm();
 
   // Dynamic footer year
   var yearEl = document.getElementById('footer-year');
